@@ -1,0 +1,580 @@
+
+/*--------------- General Styles ----------------*/
+:root {
+  --muddyred:  #be4f58;
+  --deepred: #943b43;
+  --lightgreen: rgb(154, 187, 155);
+  --midgreen: rgb(98, 157, 100);
+  --darkgreen: rgb(45, 71, 46);
+  --middarkgreen: rgb(76, 119, 78);
+  --tonedyellow: rgb(180, 164, 110);
+  --lightertonedyellow: rgb(218, 197, 135); 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+
+
+/*-------------- Sign Up/Login Page -------------------*/
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+/*----- Logo ------*/
+.logo {
+  margin-bottom: 10px;
+}
+
+.logo span {
+  margin-left: 5px;
+  color: red
+}
+
+.logo svg path {
+  fill: red;
+}
+
+/*-------- Form ---------*/
+
+.auth-container-box {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+
+  background-color: var(--midgreen);
+  color: white;
+  border-radius: 5px;
+}
+
+.auth-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+}
+
+.auth-form input {
+  height: 40px;
+  width: 100%;
+  margin: 10px 0;
+  max-width: 350px;
+
+  border-radius: 5px;
+  border: 0.5px solid grey;
+}
+
+.auth-form .auth-submit {
+  width: 60%;
+
+  border-radius: 20px;
+  border: 2px solid var(--darkgreen);
+  background-color: white;
+  color: var(--darkgreen);
+  cursor: pointer;
+}
+
+.auth-submit:hover {
+  background-color: var(--darkgreen);
+  color: white;
+}
+
+/*----- Signup Login Buttons ------*/
+
+.auth-options {
+  width: 25%;
+  min-width: 115px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.auth-options button {
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  color: white;
+}
+
+.auth-options button:hover {
+  color: var(--darkgreen);
+}
+
+/*----------------- HOMEPAGE -------------------*/
+
+.homepage{
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--darkgreen);
+  padding-bottom: 50px;
+  position: relative;
+}
+
+/*----------------- Homepage Header -------------------*/
+
+.homepage-header {
+  background-color: var(--middarkgreen);
+  padding: 10px 100px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 5px 5px 3px;
+}
+
+/*-----sign out button-----*/
+
+.signout-button {
+  float: right;
+  border: 2px solid var(--lightgreen);
+  color: var(--lightgreen);
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.signout-button:hover{
+  border-color: var(--lightgreen);
+  background-color: var(--lightgreen);
+  color: var(--darkgreen);
+}
+
+/*----header text------*/
+
+.homepage-header h1 {
+  margin: 50px 0 15px;
+  font-size: 40px;
+  color: white;
+}
+
+.homepage-header h1 svg {
+  fill: var(--darkgreen);
+  margin-left: 20px;
+}
+
+/*------Add list button -----*/
+
+.addlist-button {
+  border-radius: 10px;
+  border: none;
+  background-color: var(--darkgreen);
+  color: white;
+  padding: 3px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.addnew-icon {
+  width: 2em;
+  height: 2em;
+}
+
+.addnew-icon path,
+.addnew-icon polygon,
+.addnew-icon rect {
+  fill: white;
+}
+
+.addlist-button:hover {
+  background-color: var(--midgreen);
+}
+
+/*----------------- Grocery Card -------------------*/
+.homepage-body{
+  width: 80%;
+  min-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+/*--------- Grocery Card -------*/
+.grocerycard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  border-radius: 6px;
+  
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.08) 0 0 4px 3px;
+}
+
+/*-------Top Grocery Headers------*/
+
+.grocerycard-info {
+  width: 300px;
+  margin-right: -100px;
+  color: var(--deepred);
+}
+
+.top-info {
+  margin-bottom: -10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.top-info .dot{
+  margin: 0 10px;
+}
+
+.store-info{
+  font-size: 15px;
+  color: var(--deepred);
+
+}
+
+
+/*-----Progress Bar-------*/
+.outer{
+  background-color: white;
+  width: 350px;
+  height: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid var(--middarkgreen);
+}
+
+.inner{
+  height: 30px;
+}
+
+/*------ Buttons --------*/
+.grocerycard-buttons button {
+  border: 2px solid var(--deepred);
+  background-color: transparent;
+  color: var(--deepred);
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+
+.grocerycard-buttons .editlist-button {
+  color: var(--middarkgreen);
+  border: 2px solid var(--middarkgreen);
+  margin-right: 10px;
+}
+
+.editlist-button:hover{
+  background-color: var(--middarkgreen);
+  color: white;
+}
+
+.deletelist-button:hover{
+  background-color: var(--deepred);
+  color: white;
+}
+
+/*----------------- Addlist Modal -------------------*/
+.addlist-modal {
+  position: absolute;
+  left: 30%;
+  top: 15%;
+
+  width: 40vw;
+  height: 500px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+  border: 1px solid var(--darkgreen);
+}
+
+.addlist-form-header button{
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.addlist-form-header h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  padding: 0 40px;
+  color: var(--darkgreen);
+}
+
+.addlist-modal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  height: 75%;
+  width: 80%;
+}
+
+.addlist-modal form input {
+  height: 40px;
+  color: var(--darkgreen);
+}
+
+.addlist-modal form label {
+  margin-bottom: -30px;
+}
+
+.addlist-modal .addlist-submit {
+  border-radius: 20px;
+  border: 2px solid var(--darkgreen);
+  background-color: white;
+  color: var(--darkgreen);
+  cursor: pointer;
+}
+
+.addlist-submit:hover{
+  background-color: var(--darkgreen);
+  color: white;
+}
+
+/*----------------- Listpage -------------------*/
+.listpage {
+  position: absolute;
+  overflow-y:scroll;
+  background-color: white;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 50px;
+  z-index: 200;
+}
+
+.listpage-header{
+  background-color:  var(--muddyred);
+  padding: 40px 175px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 6px 2px;
+}
+
+.listpage-header-text {
+  width: 400px;
+  color: white;
+}
+
+.listpage-header-bottom{
+  display: flex;
+  align-items: center;
+}
+
+.listpage-header-text h1 {
+  font-size: 50px;
+  margin-bottom: -5px;
+}
+
+.listpage-header .additem-button  {
+  margin-right: 40px;
+  border: none;
+  background-color: #5f2429 ;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.additem-button:hover{
+  background-color: var(--deepred);
+}
+
+.listpage-exit {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.listpage-exit:hover {
+  background-color: white;
+  color: var(--muddyred);
+}
+
+.listpage-body {
+  width: 70%;
+  min-width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+/*----------------- Accordian -------------------*/
+
+.accordion {
+  position: relative;
+}
+
+.accordion-title{
+  background-color:  var(--deepred);
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+  padding: 15px;
+  padding-left: 20px;
+  color: white;
+  border-radius: 5px;
+  position: relative;
+}
+
+.active-button{
+  position: absolute;
+  right: 20px;
+  top: 12%;
+  font-size: 30px;
+  color: var(--tonedyellow);
+  cursor: pointer;
+}
+
+.accordion-content {
+  background-color: rgb(218, 197, 135);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 5px;
+  margin-top: -5px;
+  z-index: -1;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 5px 3px;
+
+}
+
+
+/*----------------- List Item -------------------*/
+.list-item{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 0 5px 1px;
+}
+
+/*------- Checkbox -------*/
+.item-check-input {
+  height: 30px;
+  width: 30px;
+  margin-left: 40px;
+  margin-right: 10px;
+}
+
+/*------- List Info ------*/
+.list-item-info {
+  font-size: 18px;
+  color: var(--muddyred);
+}
+
+.list-item-quantity {
+  color:  var(--middarkgreen);
+  font-weight: bold;
+}
+
+.list-item-details{
+  font-size: 15px;
+}
+
+.list-item-details span{
+  font-weight: bold;
+}
+
+/*------ Delete button ------*/
+.deleteitem-button{
+  position: absolute;
+  right: 40px;
+  border: 2px solid var(--muddyred);
+  color: var(--muddyred);
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.deleteitem-button:hover{
+  background-color: var(--muddyred);
+  color: white;
+}
+
+
+/*------------------- Add item Modal ------------------*/
+.additem-modal {
+  position: absolute;
+  z-index: 2;
+  left: 30%;
+  top: 5%;
+
+  width: 40vw;
+  height: 600px;
+  background-color: white;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: white;
+}
+
+.additem-form-header button{
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.additem-form-header h3 {
+  font-size: 40px;
+  margin-top: 20px;
+  padding: 0 40px;
+  color: var(--muddyred);
+}
+
+.additem-modal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  height: 75%;
+  width: 80%;
+}
+
+.additem-modal form input {
+  height: 40px;
+}
+
+.additem-modal form label {
+  margin-bottom: -30px;
+  color: var(--muddyred);
+}
+
+.additem-modal .additem-submit {
+  border-radius: 20px;
+  border: 2px solid var(--muddyred);
+  background-color: white;
+  color: var(--muddyred);
+  cursor: pointer;
+}
+
+.additem-submit:hover{
+  background-color: var(--muddyred);
+  color: white;
+}
+
